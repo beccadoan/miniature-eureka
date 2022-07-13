@@ -48,7 +48,8 @@ const deleteNote = (id) =>
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+  }).then(result => 
+    console.log(result));
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
@@ -79,6 +80,7 @@ const handleNoteSave = () => {
 
 // Delete the clicked note
 const handleNoteDelete = (e) => {
+  console.log("delete clicked");
   // Prevents the click listener for the list from being called when the button inside of it is clicked
   e.stopPropagation();
 

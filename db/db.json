@@ -1,9 +1,19 @@
 {
-    "notes": [
-        {
-            "title":"Test Title",
-            "text":"Test text"
-        }
-    ]
+  "notes": [
+    {
+      "title": "New Note",
+      "text": "note details",
+      "id": "c9838ql8l5iv4bzg"
+    },
+    {
+      "title": "My note",
+      "text": "My note",
+      "id": "c9838skcl5ivlszn"
+    },
+    {
+      "title": "Buy Groceries",
+      "text": "I need to buy apples, tomatoes, grapes, and fresh sourdough bread.",
+      "id": "c9838skcl5ivmora"
+    }
+  ]
 }
-
