@@ -28,4 +28,10 @@ router.post('/notes', (req, res) => {
     }
 })
 
+router.delete('/notes/:id', (req, res) => {
+    const noteId = req.params.id
+    const note = deleteNotebyId(noteId);
+    res.json(note)
+})
+
 module.exports = router;

@@ -48,8 +48,7 @@ const deleteNote = (id) =>
     headers: {
       'Content-Type': 'application/json',
     },
-  }).then(result => 
-    console.log(result));
+  });
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
@@ -80,7 +79,6 @@ const handleNoteSave = () => {
 
 // Delete the clicked note
 const handleNoteDelete = (e) => {
-  console.log("delete clicked");
   // Prevents the click listener for the list from being called when the button inside of it is clicked
   e.stopPropagation();
 
@@ -147,6 +145,7 @@ const renderNoteList = async (notes) => {
         'float-right',
         'text-danger',
         'delete-note'
+
       );
       delBtnEl.addEventListener('click', handleNoteDelete);
 
@@ -180,6 +179,7 @@ if (window.location.pathname === '/notes') {
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
+  // noteList.addEventListener('click', handleNoteDelete);
 }
 
 getAndRenderNotes();
